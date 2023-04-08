@@ -1,16 +1,59 @@
-# splash_screen
+# Splash Screen
 
-A new Flutter project.
+With this project we created splash screen with Flutter Package called Flutter Native Splash.
 
-## Getting Started
+1- First add package in pubspec.yaml file.
 
-This project is a starting point for a Flutter application.
+<pre>
+dependencies:
+  flutter_native_splash: ^latest_version
+</pre>
 
-A few resources to get you started if this is your first Flutter project:
+2- Then created splash screen on pubspec.yaml file.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<pre>
+# flutter_native_splash-development.yaml
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/flutter.png
+  color_dark: "#121212"
+  image_dark: assets/flutter.png
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  android_12:
+    image: assets/flutter.png
+    icon_background_color: "#ffffff"
+    image_dark: assets/flutter.png
+    icon_background_color_dark: "#121212"
+
+  web: false
+</pre>
+
+3- Run the package.
+
+<pre>
+flutter pub run flutter_native_splash:create
+</pre>
+
+P.s. If you customize again splash screen, you should flutter clean.
+
+<br>
+
+## Images
+
+<br>
+<p float="left">
+  <img hspace="20" src="readme_files/dark.jpg" width="200" />
+  <img hspace="20"  src="readme_files/dark_splash.jpg" width="200" />
+  <img hspace="20" src="readme_files/light.jpg" width="200" />
+  <img hspace="20"  src="readme_files/light_splash.jpg" width="200" />
+</p>
+
+<br>
+
+## Gif
+
+<br>
+
+<p>
+  <img hspace="20"  src="readme_files/splash_gif.gif" width="200" />
+</p>
